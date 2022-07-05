@@ -30,7 +30,7 @@ public class Main {
             CosmosObj cosmosObj = mapper.readValue(entity.getContent(), new TypeReference<>() {
             });
 
-            request = new HttpGet(cosmosObj.getHdurl());
+            request = new HttpGet(cosmosObj.getHdUrl());
             response = httpClient.execute(request);
 
             entity = response.getEntity();
